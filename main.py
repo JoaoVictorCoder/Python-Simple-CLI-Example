@@ -1,4 +1,5 @@
-import cmd, os, parse, platform, sys
+import cmd
+import os
 from colorama import Fore
 from prettytable import PrettyTable, TableStyle
 
