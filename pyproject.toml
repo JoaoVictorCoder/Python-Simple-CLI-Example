@@ -1,7 +1,7 @@
 [project]
-name = "pythonprojects"
+name = "Simple CLI Example"
 version = "0.1.0"
-description = "Add your description here"
+description = "My first python project, a Simple CLI Example"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
