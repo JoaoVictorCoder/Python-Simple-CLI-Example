@@ -1,5 +1,5 @@
 [project]
-name = "Simple CLI Example"
+name = "simple-cli-project"
 version = "0.1.0"
 description = "My first python project, a Simple CLI Example"
 readme = "README.md"
