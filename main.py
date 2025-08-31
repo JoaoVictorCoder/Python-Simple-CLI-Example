@@ -1,15 +1,15 @@
-import cmd
-import os
+import cmd, os, parse, platform, sys
 from colorama import Fore
 from prettytable import PrettyTable, TableStyle
 
 fm = Fore.MAGENTA
 fy = Fore.YELLOW
-fr = Fore.RESET
+fr = Fore.RED
+freset = Fore.RESET
 
 header = PrettyTable()
-header.field_names = [f" {fm}Simple CLI{fr}"]
-header.add_row([f'  Type {fy}"help"{fr} for a list of all commands'])
+header.field_names = [f" {fm}Simple CLI{freset}"]
+header.add_row([f'  Type {fy}"help"{freset} for a list of all commands'])
 header.align = "l"
 header.format = True
 header.set_style(TableStyle.DOUBLE_BORDER)
@@ -32,8 +32,9 @@ class MyCLI(cmd.Cmd):
         print()
         return line
 
-    def do_hello(self, line):
-        print("hello")
+    def do_print(self, arg):
+        "Prints his arguments"
+        print(arg)
 
     def do_q(self, line):
         "Quit CLI"
@@ -43,6 +44,9 @@ class MyCLI(cmd.Cmd):
     def postcmd(self, stop, line):
         print()
         return stop
+
+    def help_help(self):
+        print("List help")
 
 
 if __name__ == "__main__":
